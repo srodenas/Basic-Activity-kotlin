@@ -30,12 +30,15 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController  //nuestro navController, para la navegación
         appBarConfiguration = AppBarConfiguration(navController.graph)
+        /*
+        Necesitamos integración entre la barra de acción y el controlador de navegación
+         */
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Alguna chorrada", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
     }
