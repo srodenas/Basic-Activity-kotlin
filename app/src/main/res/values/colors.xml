@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FF5722</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="orange">#FF5722</color>
+    <color name="customAppBarColor">#2196F3</color>
+    <!-- Color del texto del título en la barra de aplicación -->
+    <color name="customAppBarTitleColor">#FFFFFF</color>
+    <color name="colorPopupBackground">#FFFFFF</color>
+    <color name="colorPopupText">#000000</color>
 </resources>

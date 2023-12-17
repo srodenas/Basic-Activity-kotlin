@@ -1,7 +1,26 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.FirstMenuBasic" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-    </style>
-</resources>
+
+
+ <resources xmlns:tools="http://schemas.android.com/tools">
+
+<style name="Base.Theme.FirstMenuBasic" parent="Theme.Material3.DayNight.NoActionBar">
+
+<item name="colorPrimary">@color/colorPrimary</item>
+<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+<item name="colorAccent">@color/orange</item>
+</style>
+
+
+<style name="Theme.FirstMenuBasic.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar"  />
+<style name="Theme.FirstMenuBasic.PopupOverlay" parent="ThemeOverlay.Material3.Light" />
+
+    </resources>
+
+ <!--
+
+ <resources xmlns:tools="http://schemas.android.com/tools">
+
+ <style name="Base.Theme.FirstMenuBasic" parent="Theme.Material3.DayNight.NoActionBar">
+
+ </style>
+     </resources>
+ -->
