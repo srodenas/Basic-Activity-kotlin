@@ -32,11 +32,26 @@ class MainActivity : AppCompatActivity() {
 
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController  //nuestro navController, para la navegación
-        appBarConfiguration = AppBarConfiguration(navController.graph)
         /*
-        Necesitamos integración entre la barra de acción y el controlador de navegación
+        AppBarConfiguration, administra el comportamiento del botón de Navegación en la esquina
+        superior izquierda. Cambiará conforme el usuario se encuentre en un nivel superior.
+
+        Si No estamos utilizando un Drawer, en el nivel superior el botón de navegación está oculto. Sin embargo
+        si tenemos un Navigation Drawer, el botón de navegación estará visible, viéndose un icono lateral de tres líneas
+        horizontales. Conforme navegemos, el botón de navegación cambiará a una <-.
+
+        Necesitamos nuestro arbol de navegación, para que sepa cúal es el fragmento superior y así
+        controlar la vuelta atrás.
+         */
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+
+        /*
+        Necesitamos integración entre la barra de acción y el controlador de navegación.
+        Esto hace que conforme navegemos, cambie el nombre del fragmento en la barra superior y por supuesto
+        que nos salga la flecha <- cuando estamos en un nivel inferior.
          */
         setupActionBarWithNavController(navController, appBarConfiguration)
+
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Alguna chorrada", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
